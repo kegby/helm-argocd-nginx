@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx-sandbox 
+  name: nginx-sandbox
   namespace: argocd
 spec:
   destination:
@@ -12,7 +12,7 @@ spec:
     helm:
       valueFiles:
       - values.yaml
-    path: 
-    repoURL:  
+    path: helm-chart 
+    repoURL: https://github.com/kegby/helm-argocd-nginx
     targetRevision: HEAD
   syncPolicy: {}
