@@ -16,8 +16,8 @@ kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}
 # ------ Untested from now on ----->
 # Launch Argocd App
 kubectl apply -f argocd-nginx.yaml
-kubectl apply -f argocd-nginx-staging.yaml
-kubectl apply -f argocd-nginx-prod.yaml
+kubectl apply -f argo-nginx-staging.yaml
+kubectl apply -f argo-nginx-prod.yaml
 
 sleep 80
 
